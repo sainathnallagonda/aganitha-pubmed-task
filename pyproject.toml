@@ -1,0 +1,22 @@
+[project]
+name = "pubmed-pharma-papers"
+version = "0.1.0"
+description = "A tool to find research papers with pharmaceutical company authors"
+authors = [
+    {name = "sainath"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "typing-extensions (>=4.13.2,<5.0.0)",
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_pharma_papers.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
